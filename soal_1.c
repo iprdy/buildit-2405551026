@@ -4,27 +4,25 @@
 #include <stdlib.h>
 
 int main() {
+    int bilanganN;
+    scanf("%d", &bilanganN);
 
-    int n;
-    scanf("%d", &n);
-    int nilai[n];
-    
-    for(int i = 0; i < n; i++ ){
-        scanf("%d", &nilai[i]);
+    int urutan[bilanganN];
+    for(int i = 0; i < bilanganN; i++ ){
+        scanf("%d", &urutan[i]);
     }
-    
-    for(int i = 0; i < n-1; i++){
-        for(int j = 0; j < n-1; j++){
-            if(nilai[j] > nilai[j+1]){
-                int temp = nilai[j];
-                nilai[j] = nilai[j+1];
-                nilai[j+1] = temp;
+
+    for(int i = 0; i < bilanganN-1; i++){
+        for(int j = 0; j < bilanganN-1; j++){
+            if(urutan[j] > urutan[j+1]){
+                int temp = urutan[j];
+                urutan[j] = urutan[j+1];
+                urutan[j+1] = temp;
             }
         }
     }
-    
-    for(int i = 0; i < n; i++){
-        printf("%d\n", nilai[i]);
+    for(int i = 0; i < bilanganN; i++){
+        printf("%d\n", urutan[i]);
     }
     return 0;
 }
