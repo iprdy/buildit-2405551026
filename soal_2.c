@@ -4,14 +4,14 @@
 #include <stdlib.h>
 
 int main() {
-    char satu[50];
-    char dua[50];
-    scanf ("%s", &satu);
-    scanf ("%s", &dua);
-    if (strcmp(satu, dua) == 0) {
+    char pertama[50];
+    char kedua[50];
+    scanf ("%s", &pertama);
+    scanf ("%s", &kedua);
+    if (strcmp(pertama, kedua) == 0) {
         printf("IDENTIK");
     }
-    else if(strlen(satu) != strlen(dua)) {
+    else if(strlen(pertama) != strlen(kedua)) {
         printf("BERBEDA");
     }
     else {
